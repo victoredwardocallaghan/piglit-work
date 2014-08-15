@@ -3875,6 +3875,22 @@ with profile.group_manager(
     g(['arb_copy_image-formats', '--samples=8'])
 
 with profile.group_manager(
+        PiglitGLTest,
+        grouptools.join('spec', 'arb_conditional_render_inverted')) as g:
+    g(['arb_conditional_render_inverted-begin-while-active'])
+    g(['arb_conditional_render_inverted-begin-zero'])
+    g(['arb_conditional_render_inverted-bitmap'])
+    g(['arb_conditional_render_inverted-blitframebuffer'])
+    g(['arb_conditional_render_inverted-clear'])
+    g(['arb_conditional_render_inverted-copypixels'])
+    g(['arb_conditional_render_inverted-copyteximage'])
+    g(['arb_conditional_render_inverted-copytexsubimage'])
+    g(['arb_conditional_render_inverted-dlist'])
+    g(['arb_conditional_render_inverted-drawpixels'])
+    g(['arb_conditional_render_inverted-generatemipmap'])
+    g(['arb_conditional_render_inverted-vertex_array'])
+
+with profile.group_manager(
         PiglitGLTest, grouptools.join('spec', 'arb_cull_distance')) as g:
     g(['arb_cull_distance-max-distances'])
 
